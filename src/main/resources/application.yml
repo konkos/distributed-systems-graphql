@@ -1,0 +1,12 @@
+spring:
+  graphql:
+    graphiql:
+      enabled: true
+  datasource:
+    url: jdbc:mysql://${MYSQL_HOST:localhost}:3306/ #Database Name
+    username: # add user from db
+    password: # add user's password
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update

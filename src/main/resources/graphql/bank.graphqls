@@ -1,0 +1,25 @@
+type BankAccount {
+    id: ID!
+    amount: Float
+    user: BankUser!
+}
+
+type BankUser {
+    id:ID!
+    userName: String
+    account: BankAccount
+}
+
+type Query {
+    getAccount(userName: String!) : BankAccount!
+    getUsers : [BankUser]
+    getUser(userName: String!): BankUser
+
+}
+
+type Mutation {
+    createUser(userName: String): BankUser
+    createAccount(userName:String): BankAccount
+    addAmount(userName:String, amount: Float): BankAccount
+    transferAmount(userNameSender: String, userNameReceiver: String, amount: Float): Boolean
+}

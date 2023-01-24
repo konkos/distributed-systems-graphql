@@ -1,0 +1,33 @@
+# mutation {
+#   createUser(userName:"John") {
+#     id
+#   }
+# }
+
+# mutation{
+#   createAccount(userName:"John"){
+#     id
+#     amount
+#   }
+# }
+
+# query{
+#   getUsers{
+#     id
+#     userName
+#     account {
+#       id
+#       amount
+#     }
+#   }
+# }
+
+# mutation {
+#   addAmount(userName:"John", amount:100){
+#     amount
+#   }
+# }
+
+mutation{
+  transferAmount(userNameSender:"name1",userNameReceiver:"name2", amount:20)
+}
